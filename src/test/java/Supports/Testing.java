@@ -14,6 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import Supports.CommonFunction.DriverType;
 import Supports.CommonFunction.How;
 
 public class Testing {
@@ -28,19 +29,19 @@ public class Testing {
 		
 //		DesiredCapabilities cap = new DesiredCapabilities();
 //		cap.setCapability(ChromeOptions.CAPABILITY, options);
-		WebDriver driver = new ChromeDriver();
+		//CommonFunction com = new CommonFunction(driverType)
 //		CommonFunction com = new CommonFunction(CommonFunction.DriverType.CHROME_DRIVER);
 //		com.get("http://www.google.com");
 //		com.fill(How.XPATH, "//*[@id=\"lst-ib\"]", "abc");
 		//implicit wait'
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//explicit wait
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-		driver.get("http://demo.guru99.com/test/guru99home/");
-		driver.manage().window().maximize();
-		//driver.findElement(By.xpath("//*[@id=\"rt-header\"]/div/div[2]/div/ul/li[6]/a")).click();
-		WebElement guru99 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"rt-header\"]/div/div[2]/div/ul/li[6]/a")));
-		guru99.click();
+//		WebDriverWait wait = new WebDriverWait(driver, 20);
+//		driver.get("http://demo.guru99.com/test/guru99home/");
+//		driver.manage().window().maximize();
+//		//driver.findElement(By.xpath("//*[@id=\"rt-header\"]/div/div[2]/div/ul/li[6]/a")).click();
+//		WebElement guru99 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"rt-header\"]/div/div[2]/div/ul/li[6]/a")));
+//		guru99.click();
 		//PageFactory.
 		
 

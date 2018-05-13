@@ -61,7 +61,7 @@ public class CommonFunction{
 //		VISIBILITY_OF_ALL_ELEMENTS_LOCATED_BY,
 		VISIBILITY_OF_ELEMENTS_LOCATED
 	}
-	public CommonFunction(CommonFunction.DriverType driverType)
+	public CommonFunction(DriverType driverType)
 	{
 		switch (driverType) {
 		case CHROME_DRIVER:
@@ -182,32 +182,6 @@ public class CommonFunction{
 //		return null;
 //	}
 //	//wait function
-//	public void waitForElement(TypeOfWait typeOfWait, How how, String locator)
-//	{
-//		//WebDriverWait wait = new WebDriverWait(driver, time);
-//		WebElement getEle = getElement(how, locator);
-//		//WebElement element = wait.until(ExpectedConditions)
-//		switch(typeOfWait) {
-//		case VISIBILITY_OF_ELEMENTS_LOCATED:
-//			WebElement txtElement = (new WebDriverWait(driver, 20)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
-//		case ELEMENT_TO_BE_CLICKABLE:
-//			WebElement txtElement1 = (new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
-//		case ELEMENT_SELECTION_STATE_TO_BE:
-//			boolean txtElement2 = (new WebDriverWait(driver, 20)).until(ExpectedConditions.elementSelectionStateToBe(By.xpath(locator), true));
-//		case INVISIBILITY_OF_THE_ELEMENT_LOCATED:
-//			boolean txtElement3 = (new WebDriverWait(driver, 20)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(locator)));
-//		case VISIBILITY_OF:
-//			WebElement txtElement4 = (new WebDriverWait(driver, 20)).until(ExpectedConditions.visibilityOf((WebElement) By.xpath(locator)));
-//		case PRESENCE_OF_ELEMENT_LOCATED:
-//			WebElement txtElement5 = (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
-////		case INVISIBILITY_OF_ELEMENT_WITH_TEXT:
-////			WebElement txtElement6 = (new WebDriverWait(driver, 20)).until(ExpectedConditions.invisibilityOfElementWithText(By.xpath(locator), getElement(how, locator).getText()));
-//		case ELEMENT_TO_BE_SELECTED:
-//			boolean txtElement7 = (new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeSelected(By.xpath(locator)));
-//			
-//		}
-//		
-//	}
 //	public void waitForElement(How how, String locator, long timeOutDefault)
 //	{
 //		//new WebDriverWait(driver, timeOutDefault).until(ExpectedConditions.visibilityOfElementLocated(how,locator));
