@@ -3,18 +3,33 @@
   <groupId>FWA</groupId>
   <artifactId>FrameworkAutoTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <properties>
+  		<apachePOI.version>3.16-beta1</apachePOI.version>
+  		<testNG.version>6.13.1</testNG.version>
+  </properties>
   <dependencies>
-  	<dependency>
-  <groupId>org.testng</groupId>
-  <artifactId>testng</artifactId>
-  <version>6.8</version>
-  <scope>test</scope>
-</dependency>
+  		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testNG.version}</version>
+			<scope>test</scope>
+		</dependency>
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>3.9.1</version>
-</dependency>
+		<dependency>
+    			<groupId>org.seleniumhq.selenium</groupId>
+    			<artifactId>selenium-java</artifactId>
+    			<version>3.9.1</version>
+		</dependency>
+		<!-- Read Excel file (xls, xlsx) -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${apachePOI.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${apachePOI.version}</version>
+		</dependency>
   </dependencies>
 </project>
