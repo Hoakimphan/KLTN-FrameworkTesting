@@ -25,34 +25,34 @@ public class Bmi_Calculate_Functions extends Bmi_Calculate_Page{
 		com.setUp();
 		com.get(URL);
 	}
-	public void inputAge(String key)
+	public void Age(String key)
 	{
 		com.fill(How.XPATH, CALCULATE_TXT_AGE, key);
 		com.fill(How.XPATH, CALCULATE_TXT_WEIGHT, key);
 		
 	}
-	public void selectSexMale()
+	public void genderMale()
 	{
 		com.click(How.XPATH, CALCULATE_RADIO_BTN_SEX_MALE);
 		
 	}
-	public void selectSexFemale()
+	public void genderFemale()
 	{
 		com.click(How.XPATH, CALCULATE_RADIO_BTN_SEX_FEMALE);
 	}
-	public void inputHeightFeet(String key)
+	public void HeightFeet(String key)
 	{
 		com.fill(How.XPATH, CALCULATE_TXT_HEIGHT_FEET, key);
 	}
-	public void inputHeightInches(String key)
+	public void HeightInches(String key)
 	{
 		com.fill(How.XPATH, CALCULATE_TXT_HEIGHT_INCHES, key);
 	}
-	public void inputWeight(String key)
+	public void Weight(String key)
 	{
 		com.fill(How.XPATH, CALCULATE_TXT_WEIGHT, key);
 	}
-	public void clickTheCaculate()
+	public void Caculate()
 	{
 		com.click(How.XPATH, CALCULATE_BTN);
 	}
@@ -64,49 +64,49 @@ public class Bmi_Calculate_Functions extends Bmi_Calculate_Page{
 	XSSFWorkbook workbook;
 	XSSFSheet sheet;
 	XSSFCell cell;
-	public void calculateBMIForMale() throws IOException
-	{
-		File src = new File("/FrameworkAutoTest/src/test/resources/Data/DataTest.xlsx");
-		FileInputStream fis = new FileInputStream(src);
-		workbook = new XSSFWorkbook(fis);
-		sheet = workbook.getSheet("Sheet1");
-		for(int i=1; i<=sheet.getLastRowNum();i++)
-		{
-			//input age
-			cell=sheet.getRow(i).getCell(0);
-			cell.setCellType(Cell.CELL_TYPE_STRING);
-			inputAge(cell.getStringCellValue());
-			//select male
-			selectSexMale();
-			//input feet
-			cell = sheet.getRow(i).getCell(1);
-			cell.setCellType(Cell.CELL_TYPE_STRING);
-			inputHeightFeet(cell.getStringCellValue());
-			//input inches
-			cell = sheet.getRow(i).getCell(2);
-			cell.setCellType(Cell.CELL_TYPE_STRING);
-			inputHeightInches(cell.getStringCellValue());
-			//input weight
-			cell = sheet.getRow(i).getCell(3);
-			cell.setCellType(Cell.CELL_TYPE_STRING);
-			inputWeight(cell.getStringCellValue());
-			//click calculate
-			clickTheCaculate();
-			//equal
-			cell = sheet.getRow(i).getCell(4);
-			cell.setCellType(Cell.CELL_TYPE_STRING);
-			assertEquals(com.getText(How.XPATH, CALCULATE_RESULT),cell.getStringCellValue());
-			FileOutputStream fos = new FileOutputStream(src);
-			//message to write in Result cell
-			String message = "pass";
-			//
-			sheet.getRow(i).createCell(5).setCellValue(message);
-			//finally write content
-			workbook.write(fos);
-			//close the file
-			fos.close();
-		}
-	}
+//	public void calculateBMIForMale() throws IOException
+//	{
+//		File src = new File("/FrameworkAutoTest/src/test/resources/Data/DataTest.xlsx");
+//		FileInputStream fis = new FileInputStream(src);
+//		workbook = new XSSFWorkbook(fis);
+//		sheet = workbook.getSheet("Sheet1");
+//		for(int i=1; i<=sheet.getLastRowNum();i++)
+//		{
+//			//input age
+//			cell=sheet.getRow(i).getCell(0);
+//			cell.setCellType(Cell.CELL_TYPE_STRING);
+//			inputAge(cell.getStringCellValue());
+//			//select male
+//			selectSexMale();
+//			//input feet
+//			cell = sheet.getRow(i).getCell(1);
+//			cell.setCellType(Cell.CELL_TYPE_STRING);
+//			inputHeightFeet(cell.getStringCellValue());
+//			//input inches
+//			cell = sheet.getRow(i).getCell(2);
+//			cell.setCellType(Cell.CELL_TYPE_STRING);
+//			inputHeightInches(cell.getStringCellValue());
+//			//input weight
+//			cell = sheet.getRow(i).getCell(3);
+//			cell.setCellType(Cell.CELL_TYPE_STRING);
+//			inputWeight(cell.getStringCellValue());
+//			//click calculate
+//			clickTheCaculate();
+//			//equal
+//			cell = sheet.getRow(i).getCell(4);
+//			cell.setCellType(Cell.CELL_TYPE_STRING);
+//			assertEquals(com.getText(How.XPATH, CALCULATE_RESULT),cell.getStringCellValue());
+//			FileOutputStream fos = new FileOutputStream(src);
+//			//message to write in Result cell
+//			String message = "pass";
+//			//
+//			sheet.getRow(i).createCell(5).setCellValue(message);
+//			//finally write content
+//			workbook.write(fos);
+//			//close the file
+//			fos.close();
+//		}
+//	}
 
 //	public void calculateBMIForMale(String age, String feet, String inches, String weight)
 //	{

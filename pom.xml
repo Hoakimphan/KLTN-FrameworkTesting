@@ -5,15 +5,9 @@
   <version>0.0.1-SNAPSHOT</version>
   <properties>
   		<apachePOI.version>3.16-beta1</apachePOI.version>
-  		<testNG.version>6.13.1</testNG.version>
   </properties>
   <dependencies>
-  		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>${testNG.version}</version>
-			<scope>test</scope>
-		</dependency>
+  		
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
     			<groupId>org.seleniumhq.selenium</groupId>
